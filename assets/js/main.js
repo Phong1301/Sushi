@@ -11,6 +11,16 @@ if(navToggle){
     })
 }
 
+/*=============== CART SHOW ===============*/
+/* Validate if constant exists */
+const navShop = document.getElementById('nav-shop');
+const navCart = document.getElementById('nav-cart');
+if(navShop){
+    navShop.addEventListener('click', ()=>{
+        navCart.classList.toggle('show-cart');
+    })
+}
+
 /*=============== MENU HIDDEN ===============*/
 /* Validate if constant exists */
 if(navClose){
