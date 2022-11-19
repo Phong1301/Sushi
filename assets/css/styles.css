@@ -1349,9 +1349,6 @@ body.dark-theme{
     right: 3rem;
   }
 
-  /* .show-cart{
-    right: 3.5rem;
-  } */
   .cart__total,
   .cart__checkout{
     font-size: var(--normal-font-size);
