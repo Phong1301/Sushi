@@ -11,16 +11,6 @@ if(navToggle){
     })
 }
 
-/*=============== CART SHOW ===============*/
-/* Validate if constant exists */
-const navShop = document.getElementById('nav-shop');
-const navCart = document.getElementById('nav-cart');
-if(navShop){
-    navShop.addEventListener('click', ()=>{
-        navCart.classList.toggle('show-cart');
-    })
-}
-
 /*=============== MENU HIDDEN ===============*/
 /* Validate if constant exists */
 if(navClose){
@@ -38,6 +28,41 @@ const linkAction = ()=>{
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+/*=============== SIGNIN/REGISTER ===============*/
+const iconsignin = document.getElementById('icon-signin'),
+      navsignin = document.querySelector('.nav__signin'),
+      closebtn = document.querySelector('.form__btn-close'),
+      overlay = document.querySelector('.nav__form'),
+      login = document.querySelector('#login'),
+      register = document.querySelector('#register');
+
+// Listen event click button open
+iconsignin.addEventListener('click', ()=>{
+    navsignin.classList.add('show-signin');
+})
+
+// Listen event click button close
+closebtn.addEventListener('click', ()=>{
+    navsignin.classList.remove('show-signin');
+})
+navsignin.addEventListener('click', ()=>{
+    navsignin.classList.remove('show-signin');
+})
+overlay.addEventListener('click', (event)=>{
+    event.stopPropagation();
+})
+
+
+/*=============== CART SHOW ===============*/
+/* Validate if constant exists */
+const navShop = document.getElementById('nav-shop');
+const navCart = document.getElementById('nav-cart');
+if(navShop){
+    navShop.addEventListener('click', ()=>{
+        navCart.classList.toggle('show-cart');
+    })
+}
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 const scrollHeader = () =>{
