@@ -490,9 +490,17 @@ body.dark-theme{
   text-align: center;
   padding: 0.5rem;
   color: #fff;
+  cursor: pointer;
 }
 
 /* LOGIN/REGISTER */
+.error{
+  color: red;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  display: none;
+}
+
 .nav__signin{
   position: relative;
   display: none;
